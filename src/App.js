@@ -53,15 +53,17 @@ const drumPads = [
 function App() {
   const [display, setDisplay] = useState("");
 
-  const handlePadClick = (id) => {
-    setDisplay(id);
+  const handlePadClick = (key) => {
+    console.log(key);
+    setDisplay(key);
   };
 
   const handleKeyPress = useCallback((event) => {
     const key = event.key.toUpperCase();
     const pad = drumPads.find((p) => p.key === key);
     if (pad) {
-      console.log("test");
+      console.log(pad);
+      console.log(pad.key);
       const audioElement = document.getElementById(pad.key);
       audioElement.play();
       handlePadClick(pad.id);
@@ -76,18 +78,21 @@ function App() {
   }, [handleKeyPress]);
 
   return (
-    <div id="drum-machine">
-      <div id="display">{display}</div>
-      <div className="drum-pads">
-        {drumPads.map((pad) => (
-          <DrumPad
-            key={pad.key}
-            id={pad.key}
-            audioUrl={pad.url}
-            handleClick={handlePadClick}
-            triggerKey={pad.key}
-          />
-        ))}
+    <div id="drum-container">
+      <div id="drum-machine">
+        
+        <div className="drum-pads">
+          {drumPads.map((pad) => (
+            <DrumPad
+              key={pad.key}
+              id={pad.id}
+              audioUrl={pad.url}
+              handleClick={handlePadClick}
+              triggerKey={pad.key}
+            />
+          ))}
+        </div>
+        <p id="display">{display}</p>
       </div>
     </div>
   );
