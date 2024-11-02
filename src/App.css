@@ -32,7 +32,6 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-
   padding: 25px;
 }
 
@@ -69,4 +68,19 @@ body {
 
 .drum-pad:hover {
   background-color: var(--secondary-color);
+}
+
+@media only screen and (max-width: 900px) {
+  #drum-container {
+    width: auto;
+  }
+  #drum-machine {
+    flex-direction: column;
+    gap: 30px;
+    padding: 15px;
+  }
+  .drum-pad{
+    width: 80px;
+    height: 50px;
+  }
 }
