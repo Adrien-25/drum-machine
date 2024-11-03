@@ -97,7 +97,7 @@ function App() {
       </div>
       <a
         id="github-link"
-        href="https://github.com/Adrien-25/clock_pomodoro.git"
+        href="https://github.com/Adrien-25/drum-machine"
         target="_blank"
         rel="noopener noreferrer"
       >
