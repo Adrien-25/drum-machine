@@ -1,7 +1,7 @@
 :root {
   /* --primary-color: #84828f; */
   /* --secondary-color: #84828f; */
-  --primary-color: #96bdc6;
+  --primary-color: #2a454b;
   --secondary-color: #81968f;
   --primary-bg-color: #cfb9a5;
   --decondary-bg-color: #e8ccbf;
@@ -19,6 +19,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 #drum-container {
   outline: 5px solid var(--secondary-color);
@@ -83,4 +84,29 @@ body {
     width: 80px;
     height: 50px;
   }
+}
+#github-link {
+  border-radius: 10px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-top: 40px;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  border: 1px solid white;
+  gap: 10px;
+}
+#github-link svg{
+  transition: all 0.3s;
+}
+#github-link:hover {
+  background-color: white;
+  color: #1e1e1e;
+}
+#github-link:hover svg{
+  fill: #1e1e1e;
 }
